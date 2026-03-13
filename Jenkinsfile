@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Source Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/YOUR_GITHUB_USERNAME/my-gs-spring-boot.git'
+                url: 'https://github.com/Joselm11/my-gs-spring-boot.git'
             }
         }
 
