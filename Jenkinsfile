@@ -37,8 +37,8 @@ pipeline {
 
                     sh """
                         curl -v -u admin:admin \
-                        --upload-file ${jarFile} \
-                        ${NEXUS_URL}${fileName}
+                        --upload-file target/*.jar \
+                        http://host.docker.internal:8081/repository/maven_releases/
                     """
                 }
             }
