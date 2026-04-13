@@ -36,7 +36,7 @@ pipeline {
                     def fileName = jarFile.tokenize('/').last()
 
                     sh """
-                        curl -v -u admin:admin \
+                        curl -v -u admin:jose1234 \
                         --upload-file target/*.jar \
                         http://host.docker.internal:8081/repository/maven_releases/
                     """
