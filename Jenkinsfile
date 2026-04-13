@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        NEXUS_URL = 'http://nexus:8081/repository/maven_releases/'
+        NEXUS_URL = 'http://host.docker.internal:8081/repository/maven_releases/'
         NEXUS_CREDENTIALS = 'jose1234'
     }
 
