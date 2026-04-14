@@ -1,0 +1,7 @@
+<servers>
+  <server>
+    <id>nexus</id> <!-- Must match the ID from pom.xml -->
+    <username>admin</username>
+    <password>Jose1234</password>
+  </server>
+</servers>
