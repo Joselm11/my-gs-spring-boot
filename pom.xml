@@ -47,9 +47,9 @@
     </plugins>
   </build>
 <distributionManagement>
-    <repository>
+    <snapshotRepository>
         <id>nexus</id>
        <url> http://host.docker.internal:8081/repository/maven-snapshots/</url>
-    </repository>
+    </snapshotRepository>
 </distributionManagement>
 </project>
