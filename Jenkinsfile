@@ -20,10 +20,9 @@ pipeline {
 
         stage('Build & Deploy to Nexus') {
             steps {
-                sh '''
-                mvn clean deploy -DskipTests \
-                -DaltDeploymentRepository=nexus::default::http://host.docker.internal:8081/repository/maven-snapshots/
-                '''
+                configFileProvider([configFile(fileId: 'f59eeba7-c514-41b6-b32d-80d6565f70b3', variable: 'MAVEN_SETTINGS')]) {
+    		sh 'mvn clean deploy -DskipTests -s $MAVEN_SETTINGS'
+		}
             }
         }
 
